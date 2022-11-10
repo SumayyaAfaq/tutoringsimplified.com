@@ -1,0 +1,170 @@
+<html lang="en">
+<head>
+<title>Activity</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="styles.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <script>
+	function allowDrop(ev) {
+	  ev.preventDefault();
+	}
+	
+	function drag(ev) {
+	  ev.dataTransfer.setData("text", ev.target.id);
+	}
+	
+	function drop(ev) {
+	console.log(ev);
+	  ev.preventDefault();
+	  var data = ev.dataTransfer.getData("text");
+	  ev.target.appendChild(document.getElementById(data));
+	}
+	
+	</script>
+	</head>
+<body>
+<div class="header">
+<img src="images/logoo.png" height="200" alt="Tutoring Simplified logo" border class = "background_image" align = "center">
+</div>
+<div class="topnav">
+    <a href="index.html"class="active"> &nbsp &nbsp Home  &nbsp &nbsp </a> 
+	          
+	<div class="dropdown">
+	<button class="dropbtn">&nbsp &nbsp  Worksheet Generator  &nbsp &nbsp </button>
+    <div class="dropdown-content">
+      <a href="englishW.html">&nbsp &nbsp &nbsp &nbsp  English  &nbsp &nbsp &nbsp &nbsp </a>
+      <a href="mathsW.html">&nbsp &nbsp &nbsp &nbsp  Mathematics  &nbsp &nbsp &nbsp &nbsp </a>
+  	  <a href="arabicW.html">&nbsp &nbsp &nbsp &nbsp  Arabic  &nbsp &nbsp &nbsp &nbsp </a>
+	  <a href="urduW.html">&nbsp &nbsp &nbsp &nbsp  Urdu  &nbsp &nbsp &nbsp &nbsp </a>
+	     </div>
+  </div>
+    <div class="dropdown">
+    <button class="dropbtn">&nbsp &nbsp  Activity Generator  &nbsp &nbsp </button>
+    <div class="dropdown-content">
+      <a href="englishA.html">&nbsp &nbsp &nbsp &nbsp  English  &nbsp &nbsp &nbsp &nbsp </a> 
+      <a href="mathsA.html">&nbsp &nbsp &nbsp &nbsp  Mathematics  &nbsp &nbsp &nbsp &nbsp </a>
+      <a href="arabicA.html">&nbsp &nbsp &nbsp &nbsp  Arabic   &nbsp &nbsp &nbsp </a>
+	  <a href="urduA.html">&nbsp &nbsp &nbsp &nbsp  Urdu   &nbsp &nbsp &nbsp </a>
+    </div>
+  </div>
+    
+	      <div class="dropdown">
+    <button class="dropbtn">&nbsp &nbsp  Reader  &nbsp &nbsp </button>
+			<div class="dropdown-content">
+			  <a href="files/englishreader.pdf">&nbsp &nbsp &nbsp &nbsp  English  &nbsp &nbsp &nbsp &nbsp </a>
+			   <a href="files/arabicreader.pdf">&nbsp &nbsp &nbsp &nbsp  Arabic  &nbsp &nbsp &nbsp &nbsp </a>
+			  <a href="files/urdureader.pdf">&nbsp &nbsp &nbsp &nbsp  Urdu  &nbsp &nbsp &nbsp &nbsp </a>
+			 
+			</div>
+	  </div>
+			<div class="topnav-right">
+			  <a href="#ContactUs">&nbsp &nbsp  Contact Us  &nbsp &nbsp </a>
+			  <a href="FAQs.html">&nbsp &nbsp FAQs  &nbsp &nbsp </a>
+			</div>
+	</div>
+		
+<p><h2 style="text-align: center;">DRAG AND DROP TO MATCH SIMILAR LETTERS</h2></p>
+<table align=center style="width:30%">
+  <tr>
+    <th>
+		<img src="images/ا.png" />
+	</th>
+	<th>
+		<div id="div1" ondrop="drop(event)" 
+		ondragover="allowDrop(event)"></div>
+	</th>
+	<th>
+		<img id="drag3" src="images/ب.png" draggable="true" 
+		ondragstart="drag(event)" width="60" height="60">
+		</th>
+	</tr>
+	<tr>
+	<th>
+		<img src="images/آ.png" />
+	</th>
+	<th>
+		<div id="div2" ondrop="drop(event)" 
+		ondragover="allowDrop(event)"></div>
+	</th>
+	<th>
+		<img id="drag1" src="images/ا.png" draggable="true" 
+		ondragstart="drag(event)" width="60" height="60">
+		</th>
+	</tr>
+	<tr>
+	<th>
+		<img src="images/ب.png" />
+	</th>
+	<th>
+		<div id="div3" ondrop="drop(event)" 
+		ondragover="allowDrop(event)"></div>
+	</th>
+	<th>
+		<img id="drag2" src="images/آ.png" draggable="true" 
+		ondragstart="drag(event)" width="60" height="60">
+	 </th>
+	</tr>
+	<tr>
+	<th>
+		<img src="images/پ.png" />
+	</th>
+	<th>
+		<div id="div4" ondrop="drop(event)" 
+		ondragover="allowDrop(event)"></div>
+	</th>
+	<th>
+		<img id="drag6" src="images/ٹ.png" draggable="true" 
+		ondragstart="drag(event)" width="60" height="60">
+	</th>
+	</tr>
+	<tr>
+    <th>
+		<img src="images/ت.png" />
+	</th>
+	<th>
+		<div id="div5" ondrop="drop(event)" 
+		ondragover="allowDrop(event)"></div>
+	</th>
+	<th>
+		<img id="drag5" src="images/پ.png" draggable="true" 
+		ondragstart="drag(event)" width="60" height="60">
+	</th>
+    </tr>
+	<tr>
+		<th>
+			<img src="images/ٹ.png" />
+		</th>
+		<th>
+			<div id="div6" ondrop="drop(event)" 
+			ondragover="allowDrop(event)"></div>
+		</th>
+		<th>
+	<img id="drag4" src="images/ث.png" draggable="true" 
+	ondragstart="drag(event)" width="60" height="60">
+	</th>
+		</tr>
+ </table>
+  <br>
+<br>
+<br>
+<br>
+<br>
+
+     <div class="footer-basic">
+        <footer>
+			 <ul class="list-inline">
+				 <li class="list-inline-item">
+					<a href="index.html" class="fa fa-home"> Home &nbsp &nbsp &nbsp &nbsp </a>
+					 <a href="FAQs.html" class="fa fa-question-circle-o" > FAQs &nbsp &nbsp &nbsp &nbsp </a> 
+					 <a id="ContactUs" >&nbsp &nbsp &nbsp &nbsp Contact Us: &nbsp &nbsp &nbsp &nbsp <a>
+					 <a href="mailto:tutoringsimplified101@gmail.com" class="fa fa-envelope-o"> Email &nbsp &nbsp &nbsp &nbsp </a>
+					  <a href="https://www.instagram.com/tutoringsimplified/" class="fa fa-instagram"> Instagram &nbsp &nbsp &nbsp &nbsp </a>
+					 <a href="Tel: +971 55 670 3700" class="fa fa-phone"> Phone &nbsp &nbsp &nbsp &nbsp </a> 
+				 </li>
+			</ul>
+		</footer>
+    </div>
+</body>
+
+</html>
